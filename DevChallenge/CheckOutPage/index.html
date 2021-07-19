@@ -1,95 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CheckOut.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <title>CheckOut Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mx-5">
+            <div class="col-8 col" id="divForm">
+                <header>CheckOut</header>
+                <!--Contact Info-->
+                <p class="mt-3" style="font-size: 28px;">Contact Information</p>
+                <form style="width: 470px;" >
+                    <p>Email</p>
+                    <div class="input-group flex-nowrap mb-4" id="formEmail">
+                        <span class="input-group-text bg-white"><img src="./email.svg"/></span>
+                        <input type="text" class=" form-control" 
+                        placeholder="Enter your email... e.g. agustin@gmail.es" id="inputEmail" 
+                        required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                    </div>
+                    <p>Mobile Phone</p>
+                    <div class="input-group flex-nowrap mb-4" id="formPhone">
+                        <span class="input-group-text bg-white"><img src="./phone.svg"/></span>
+                        <input type="text" class=" form-control" placeholder="Enter your mobile phone... e.g. 987654321" id="inputMobile"
+                        required pattern="^9[0-9]{8}">
+                    </div>
 
-    <link rel="icon" href="devchallenges.png" />
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
+                <!--Shipping address-->
+                <p class="mt-5" style="font-size: 28px;">Shipping address</p>
+                    <p>Full name</p>
+                    <div class="input-group flex-nowrap mb-4" id="formName">
+                        <span class="input-group-text bg-white"><img src="./person.svg"/></span>
+                        <input type="text" class=" form-control" 
+                        placeholder="Your full name..." id="inputName" required>
+                    </div>
+                    <p>Address</p>
+                    <div class="input-group flex-nowrap mb-4" id="formPhone">
+                        <span class="input-group-text bg-white"><img src="./address.svg"/></span>
+                        <input type="text" class=" form-control" placeholder="Enter your address ..." id="inputAddress" required>
+                    </div>
+                    <p>City</p>
+                    <div class="input-group flex-nowrap mb-4" id="formCity">
+                        <span class="input-group-text bg-white"><img src="./city.svg"/></span>
+                        <input type="text" class=" form-control" placeholder="Enter your city ..." id="inputCity" required>
+                    </div>
+                    <div class="row">
+                    <div class="col-6">
+                        <p>Country</p>
+                        <div class="input-group " id="formCity">
+                            <span class="input-group-text bg-white"><img src="./country.svg"/></span>
+                            <select class="form-select" id="selectCountry">
+                                <option selected disabled hidden>Choose</option>
+                                <option>Argentina</option>
+                                <option>Perú</option>
+                                <option>Brasil</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p>Postal Code</p>
+                        <div class="input-group " id="formCity">
+                            <span class="input-group-text bg-white"><img src="./postalCode.svg"/></span>
+                            <input type="text" class=" form-control" placeholder="Enter your city ..." id="inputPostal" required>
+                        </div>
+                    </div>
+                </div>
+                <div  >
+                    <button type="submit" id="button">Submit</button>
+                </div>
+                </form>
+            </div>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+            <div class="col-4">
 
-    <title>Devchallenges</title>
+            </div>
 
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+        </div>
     </div>
-  </body>
+    
+</body>
 </html>

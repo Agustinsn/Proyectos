@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+#divForm{
+    margin-top: 50px;
+}
+
+header{
+    font-family: 'Montserrat';
+    font-size: 36px;
+}
+.input-group{
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+#inputEmail,#inputMobile,#inputName,#inputAddress,#inputCity,#selectCountry,#inputPostal{
+    border: none; 
+}
+#inputMobile{
+    appearance: none;
+}
+#button{
+
+}
